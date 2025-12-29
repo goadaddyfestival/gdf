@@ -279,6 +279,35 @@
             margin-top: 60px;
         }
         
+        .home-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #e40303 0%, #ff8c00 20%, #ffed00 40%, #008026 60%, #004dff 80%, #750787 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin: 40px auto;
+            box-shadow: 0 8px 30px rgba(255, 237, 0, 0.4);
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 237, 0, 0.6);
+        }
+        
+        .copyright {
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            opacity: 0.7;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
         @media (max-width: 767px) {
             .rainbow-line {
                 max-width: 90%;
@@ -730,6 +759,14 @@
             <p style="font-size: clamp(1.1rem, 2vw, 1.4rem); margin: 12px 0;">💬 +91 9967622952</p>
             <div class="rainbow-line" style="margin: 35px auto 25px; max-width: 400px;"></div>
             <p style="font-size: clamp(1.2rem, 2.3vw, 1.6rem); font-weight: 700; font-style: italic;">India's Pioneering Gay Daddy Festival</p>
+            
+            <!-- Home Button -->
+            <div style="margin-top: 50px;">
+                <a href="https://goadaddyfestival.com" class="home-button">🏠 VISIT MAIN WEBSITE</a>
+            </div>
+            
+            <!-- Copyright -->
+            <p class="copyright">Copyright © 2025 Goa Daddy Festival - All Rights Reserved.</p>
         </footer>
     </div>
 </body>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Daddy Festival - Edition 2 Complete Itinerary</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f1624 100%);
+            color: white;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 20px 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: 30px 25px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 40px 30px;
+            }
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .header {
+                padding: 50px 20px;
+            }
+        }
+        
+        .rainbow-line {
+            height: 4px;
+            background: linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255, 237, 0, 0.5), 0 0 40px rgba(228, 3, 3, 0.3);
+        }
+        
+        .festival-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 6vw, 4.5rem);
+            font-weight: 900;
+            background: linear-gradient(90deg, #e40303 0%, #ff8c00 16.66%, #ffed00 33.33%, #008026 50%, #004dff 66.66%, #750787 83.33%, #e40303 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            word-wrap: break-word;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+        
+        .edition-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e40303 0%, #ff8c00 20%, #ffed00 40%, #008026 60%, #004dff 80%, #750787 100%);
+            padding: 12px 40px;
+            border-radius: 40px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(255, 237, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        .day-section {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+            border-radius: 20px;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            border: 3px solid;
+            border-image: linear-gradient(135deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787) 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(228, 3, 3, 0.08) 0%,
+                rgba(255, 140, 0, 0.08) 16.66%,
+                rgba(255, 237, 0, 0.08) 33.33%,
+                rgba(0, 128, 38, 0.08) 50%,
+                rgba(0, 77, 255, 0.08) 66.66%,
+                rgba(117, 7, 135, 0.08) 83.33%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .day-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .day-section {
+                border-radius: 25px;
+                padding: 45px 35px;
+                margin-bottom: 45px;
+            }
+        }
+        
+        .day-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .day-number {
+            font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+            font-weight: 900;
+            color: #ffed00;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        
+        .day-theme {
+            font-size: clamp(1.1rem, 2.8vw, 1.8rem);
+            font-weight: 700;
+            margin-bottom: 18px;
+            line-height: 1.3;
+            word-spacing: 0.1em;
+        }
+        
+        .day-intro {
+            font-size: clamp(1rem, 1.6vw, 1.15rem);
+            line-height: 1.8;
+            max-width: 850px;
+            margin: 15px auto 0;
+        }
+        
+        .event-block {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (min-width: 768px) {
+            .event-block {
+                border-radius: 18px;
+                padding: 30px;
+                margin-bottom: 25px;
+            }
+        }
+        
+        .event-block.highlight {
+            background: linear-gradient(135deg, 
+                rgba(228, 3, 3, 0.25),
+                rgba(255, 140, 0, 0.25),
+                rgba(255, 237, 0, 0.25));
+            border: 3px solid rgba(255, 237, 0, 0.6);
+            box-shadow: 0 0 30px rgba(255, 237, 0, 0.2);
+        }
+        
+        .event-time {
+            font-size: clamp(1rem, 2.2vw, 1.6rem);
+            font-weight: 900;
+            color: #ffed00;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            display: inline-block;
+        }
+        
+        .event-title {
+            font-size: clamp(1.15rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+            word-wrap: break-word;
+        }
+        
+        .event-description {
+            font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+        
+        .event-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 15px 0;
+        }
+        
+        .event-list li {
+            font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+            padding: 6px 0 6px 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .event-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ffed00;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .highlight-text {
+            background: rgba(255, 237, 0, 0.18);
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-top: 14px;
+            border-left: 4px solid #ffed00;
+            font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+        }
+        
+        .dress-code {
+            background: rgba(0, 0, 0, 0.25);
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 16px;
+            border-left: 4px solid #ffed00;
+            font-weight: 700;
+        }
+        
+        .end-day {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px 20px;
+            background: rgba(255, 237, 0, 0.12);
+            border-radius: 15px;
+            border: 2px solid #ffed00;
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255, 237, 0, 0.4), 0 0 30px rgba(0, 128, 38, 0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 767px) {
+            .rainbow-line {
+                max-width: 90%;
+            }
+            
+            .day-header {
+                padding-bottom: 20px;
+            }
+            
+            .event-list li {
+                padding-left: 20px;
+                font-size: 0.95rem;
+            }
+            
+            /* Better mobile text rendering */
+            .festival-title {
+                font-size: 2rem;
+                letter-spacing: 0.5px;
+            }
+            
+            .day-number {
+                font-size: 1.8rem;
+            }
+            
+            .day-theme {
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+            }
+            
+            .event-time {
+                font-size: 1rem;
+                white-space: nowrap;
+            }
+            
+            .event-title {
+                font-size: 1.15rem;
+                line-height: 1.4;
+            }
+            
+            .event-description {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            /* Prevent text overflow */
+            h1, h2, h3, h4, h5, h6 {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Better spacing on mobile */
+            .day-section {
+                padding: 25px 15px;
+            }
+            
+            .event-block {
+                padding: 18px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="rainbow-line"></div>
+            <h1 class="festival-title">GOA DADDY FESTIVAL</h1>
+            <p class="tagline" style="font-size: clamp(1rem, 1.9vw, 1.25rem); opacity: 0.95; margin-top: 10px; margin-bottom: 25px;">Bringing Daddies and Their Admirers Together</p>
+            <div class="edition-badge">EDITION 2</div>
+            <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin: 18px 0; font-weight: 700;">ITINERARY PREVIEW</h2>
+            <p style="font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; color: #ffed00; margin-top: 10px;">A Sneak Peek Into What's Coming</p>
+            <p style="font-size: clamp(0.95rem, 1.8vw, 1.15rem); font-weight: 600; margin-top: 15px; font-style: italic; opacity: 0.95;">This is a tentative schedule to give you a glimpse of the incredible experiences we're planning.<br>Final dates, venue, activities, and booking information will be announced soon.</p>
+        </header>
+        
+        <div class="rainbow-line"></div>
+        
+        <!-- DAY 1 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-number">✨ DAY 1</h2>
+                <h3 class="day-theme">ARRIVAL • CONNECTION • CELEBRATION</h3>
+                <div class="day-intro">
+                    <p style="font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">🛬 LET THE FESTIVAL BEGIN</p>
+                    <p>Edition 2 begins with a warm welcome and easy arrivals, opening into an extended 3-night celebration — more time to slow down, connect, and feel the GDF energy from the moment you arrive.</p>
+                    <p style="font-style: italic; margin-top: 8px;">No rush. Just comfort, connection, and good vibes. 🥂</p>
+                </div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🕐 1:00 PM ONWARDS</div>
+                <h4 class="event-title">🏨 CHECK-IN AND SETTLE IN</h4>
+                <p class="event-description">Your Goa Daddy Festival experience begins at the reception counter.</p>
+                <p class="event-description">Complete your check-in, collect your wristband and welcome kit, and get ready to step into festival mode.</p>
+                <p class="event-description" style="font-weight: 700; margin-top: 12px;">Arrived early? No worries at all.</p>
+                <p class="event-description">Leave your luggage with the concierge and unwind at:</p>
+                <ul class="event-list">
+                    <li>🍹 Pool Bar</li>
+                    <li>🛋 Lounge</li>
+                    <li>🍽 Restaurant</li>
+                    <li>🌴 Common Areas</li>
+                </ul>
+                <div class="highlight-text">Settle in, freshen up, and let the festival energy sink in — at your own pace.</div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🕐 1:00 PM – 3:00 PM</div>
+                <h4 class="event-title">🍽 WELCOME LUNCH</h4>
+                <p class="event-description">Enjoy a delicious Goan buffet as you ease into the festival atmosphere.</p>
+                <p class="event-description">A warm and relaxed start to meeting your festival family.</p>
+                <div class="highlight-text">Relax • Eat • Smile — you've arrived!</div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🕐 1:00 PM – 5:00 PM</div>
+                <h4 class="event-title">🌴 FREE TIME AND SOCIAL CONNECTIONS</h4>
+                <p class="event-description">This time is yours to enjoy — unwind, explore, or connect naturally with fellow guests.</p>
+                <p class="event-description" style="font-weight: 700; margin-top: 12px;">Choose your vibe:</p>
+                <ul class="event-list">
+                    <li>🌊 Pool lounging</li>
+                    <li>🍹 Poolside bar hangouts</li>
+                    <li>🛋 Chill at the restaurant and lounge</li>
+                    <li>🛌 In-room relaxation</li>
+                </ul>
+                <p class="event-description" style="font-weight: 700; margin-top: 16px;">🎯 GAMES CORNER (Poolside)</p>
+                <p class="event-description">A dedicated social zone with multiple tables set up for interactive play throughout the afternoon.</p>
+                <p class="event-description" style="font-weight: 600;">Poker • Rummy • Teen Patti • Ludo • Uno</p>
+                <div class="highlight-text">— an easy, fun way to meet fellow guests and break the ice.</div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🕔 5:00 PM – 7:00 PM</div>
+                <h4 class="event-title">☕ HIGH TEA AND OFFICIAL WELCOME CEREMONY</h4>
+                <p class="event-description">Let's officially begin Goa Daddy Festival – Edition 2 🎉</p>
+                <p class="event-description">Join us poolside as we come together to open the festival in a relaxed and welcoming setting.</p>
+                <p class="event-description" style="font-weight: 700; margin-top: 14px;">Programme Highlights:</p>
+                <ul class="event-list">
+                    <li>🎙 Welcome address</li>
+                    <li>🤝 Meet the GDF Team</li>
+                    <li>📜 Festival overview and guidelines</li>
+                    <li>🍰 Tea, coffee and refreshments</li>
+                </ul>
+                <div class="highlight-text">
+                    <p style="font-weight: 700; margin-bottom: 8px;">🎤 OPEN MIC – Your Voice, Your Moment</p>
+                    <p>Sing • Share a story • Perform • Be heard (or simply cheer for others!)</p>
+                </div>
+            </div>
+            
+            <div class="event-block highlight">
+                <div class="event-time">🌙 7:00 PM ONWARDS</div>
+                <h4 class="event-title">🖤 THE SIGNATURE BLACKOUT PARTY</h4>
+                <p class="event-description">As the sun sets, the night comes alive. End Day 1 with our iconic Blackout Party — bold, immersive, and unforgettable. Let the bass drop and the energy rise 💥</p>
+                <div class="dress-code">🕺 Dress Code: All Black</div>
+                <p class="event-description" style="font-weight: 700; margin-top: 16px;">Highlights:</p>
+                <ul class="event-list">
+                    <li>✨ Neon and UV glow ambience</li>
+                    <li>🎧 Professional DJs and premium sound</li>
+                    <li>💃 A dance floor that never sleeps</li>
+                    <li>🍸 Full bar service</li>
+                    <li>🍢 Starters served throughout the evening</li>
+                    <li>🍽 Buffet dinner from 10:00 PM onwards</li>
+                </ul>
+                <div class="highlight-text">Make memories. Make connections. Feel the GDF magic.</div>
+            </div>
+            
+            <div class="end-day">
+                <h3 style="font-size: clamp(1.5rem, 3vw, 2rem); color: #ffed00; margin-bottom: 10px;">🌟 END OF DAY 1</h3>
+                <p style="font-size: clamp(1rem, 1.8vw, 1.2rem);">From first hellos to unforgettable moments — tomorrow, we go even bigger. 😎🔥</p>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <!-- DAY 2 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-number">✨ DAY 2</h2>
+                <h3 class="day-theme">DIVE INTO DAY • DANCE INTO NIGHT</h3>
+                <div class="day-intro">
+                    <p>A day filled with sunshine, splashes, and star-lit music.</p>
+                    <p>From high-energy pool moments to soulful evening vibes</p>
+                    <p>Day 2 is all about connection, celebration, and unforgettable experiences. 🌈💦🎶</p>
+                </div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🍽 8:00 AM – 11:00 AM</div>
+                <h4 class="event-title">BUFFET BREAKFAST</h4>
+                <p class="event-description">Ease into the morning with a refreshing and wholesome breakfast spread.</p>
+                <p class="event-description">Fuel up, laugh a little, and gear up for the most awaited pool party of the festival!</p>
+                <div class="highlight-text">✨ Slow start • Happy conversations • Delicious beginnings</div>
+            </div>
+            
+            <div class="event-block highlight">
+                <div class="event-time">💦 11:00 AM – 3:00 PM</div>
+                <h4 class="event-title">THE SPLASH POOL PARTY</h4>
+                <p class="event-description">The GDF pool party returns — bigger, louder, and more energetic than ever!</p>
+                <p class="event-description">Dive headfirst into an afternoon packed with music, movement, and non-stop fun.</p>
+                <ul class="event-list">
+                    <li>🎯 Water and social games</li>
+                    <li>🎧 High-energy DJ music</li>
+                    <li>🛟 Fun floaties and pool props</li>
+                    <li>💦 Hydration and safety counters</li>
+                    <li>😎 Endless flirt, fun and splash moments</li>
+                </ul>
+                <div class="dress-code">👕 Dress Code: Bright Swimwear / Pool Casual</div>
+                <div class="highlight-text">📸 The perfect time for your most iconic holiday photos!</div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">😌 3:00 PM – 5:00 PM</div>
+                <h4 class="event-title">RELAX AND REFRESH BREAK</h4>
+                <p class="event-description">Take a breather — you deserve it!</p>
+                <p class="event-description" style="font-weight: 700; margin-top: 12px;">Choose your comfort:</p>
+                <ul class="event-list">
+                    <li>🛌 Power nap in your cozy room</li>
+                    <li>🕶 Chill by the pool and keep the conversations flowing</li>
+                    <li>🚶 Explore nearby spots or enjoy in-room downtime</li>
+                </ul>
+                <div class="highlight-text">Recharge for an enchanting evening ahead.</div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🍵 5:00 PM – 7:00 PM</div>
+                <h4 class="event-title">SUNSET HIGH TEA</h4>
+                <p class="event-description">Ease into the evening as the sun begins to set.</p>
+                <p class="event-description">A calm, social pause before the night unfolds.</p>
+                <ul class="event-list">
+                    <li>☕ Tea and coffee</li>
+                    <li>🍢 Evening bites</li>
+                    <li>🎶 Soft music</li>
+                    <li>🫶 Easy conversations and bonding moments</li>
+                </ul>
+                <div class="highlight-text">Soft moments, shared conversations, and sunset calm.</div>
+            </div>
+            
+            <div class="event-block highlight">
+                <div class="event-time">🎶 8:00 PM ONWARDS</div>
+                <h4 class="event-title">LIVE MUSIC NIGHT BY A CELEBRATED GOAN BAND + DINNER</h4>
+                <p class="event-description" style="font-style: italic;">(Open Lawn / Banquet)</p>
+                <p class="event-description">As night falls, the stage comes alive with a special live performance by a renowned Goan band.</p>
+                <p class="event-description">From soulful melodies to sing-along favourites and dance-worthy rhythms, this evening is all about music that brings everyone together.</p>
+                <ul class="event-list" style="margin-top: 16px;">
+                    <li>🎤 Live band performance</li>
+                    <li>🎶 Soulful tunes, sing-along classics and upbeat dance numbers</li>
+                    <li>💃 A mix of listening, singing, and dancing — your way</li>
+                    <li>🌙 Under the open Goa night sky</li>
+                    <li>🍢 Starters served during the performance</li>
+                    <li>🍸 Bar services available throughout the evening</li>
+                    <li>🍽 Followed by a lavish dinner buffet</li>
+                </ul>
+                <div class="highlight-text">An evening of music, movement, and moments you'll remember long after the night ends.</div>
+            </div>
+            
+            <div class="end-day">
+                <h3 style="font-size: clamp(1.5rem, 3vw, 2rem); color: #ffed00; margin-bottom: 10px;">🌟 END OF DAY 2</h3>
+                <p style="font-size: clamp(1rem, 1.8vw, 1.2rem);">Feel the joy. Feel the music.</p>
+                <p style="font-size: clamp(1rem, 1.8vw, 1.2rem); margin-top: 5px;">Tomorrow — we raise the bar even higher! 😎🔥</p>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <!-- DAY 3 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-number">✨ DAY 3</h2>
+                <h3 class="day-theme">RUNWAY • RECOGNITION • REVELRY</h3>
+                <div class="day-intro">
+                    <p>The grand finale of Goa Daddy Festival – a celebration of identity, elegance, and unforgettable bonds.</p>
+                    <p style="font-weight: 700; margin-top: 8px;">Today, the spotlight is on you. 🌟</p>
+                </div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🍽 8:00 AM – 11:00 AM</div>
+                <h4 class="event-title">BUFFET BREAKFAST</h4>
+                <p class="event-description">A refreshing start to the biggest day of the festival!</p>
+                <p class="event-description">Enjoy a leisurely breakfast with friends, relive the moments so far, and prepare to shine under the spotlight.</p>
+            </div>
+            
+            <div class="event-block highlight">
+                <div class="event-time">👑 11:00 AM – 1:00 PM</div>
+                <h4 class="event-title">FASHION SHOW + AWARDS CEREMONY</h4>
+                <p class="event-description" style="font-weight: 700; font-size: 1.15rem;">Spotlight. Style. Pride.</p>
+                <p class="event-description">Celebrate confidence and charisma on the runway as the community cheers you on!</p>
+                <p class="event-description" style="font-weight: 700; margin-top: 14px;">✨ Event Highlights</p>
+                <ul class="event-list">
+                    <li>Fashion Show ramp walk</li>
+                    <li>Special recognitions</li>
+                    <li>Daddy of the Year and Admirer of the Year crowning 👑</li>
+                    <li>Cheers, glamour and iconic photo moments</li>
+                </ul>
+                <div class="highlight-text">Own your walk. Own your story. 💫</div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🍽 1:00 PM – 3:00 PM</div>
+                <h4 class="event-title">LEISURE LUNCH</h4>
+                <p class="event-description">After the glamour and applause, unwind over a hearty lunch.</p>
+                <p class="event-description">Connect deeper, share stories, and make plans to stay in touch beyond the festival.</p>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🌅 4:30 PM – 6:30 PM</div>
+                <h4 class="event-title">HIGH TEA BY THE BEACH + KARAOKE</h4>
+                <p class="event-description">As the sun dips into the horizon, gather by the beach for a relaxed and soulful high tea.</p>
+                <p class="event-description">Sip, sing, and soak in the moment as music, laughter, and the sea breeze come together.</p>
+                <ul class="event-list" style="margin-top: 14px;">
+                    <li>☕ Tea, coffee and light bites</li>
+                    <li>🎤 Beachside karaoke – sing your heart out or cheer for others</li>
+                    <li>🌅 Stunning sunset views and photography moments</li>
+                    <li>🏖 Chill vibes, shared songs and heartfelt conversations</li>
+                </ul>
+                <div class="highlight-text">Hold onto these moments — they become memories you'll cherish.</div>
+            </div>
+            
+            <div class="event-block highlight">
+                <div class="event-time">💃 7:30 PM ONWARDS</div>
+                <h4 class="event-title">ROOTS & PRIDE – THE FINAL NIGHT CELEBRATION</h4>
+                
+                <p class="event-description" style="margin-bottom: 12px;">A celebration of where we come from and who we are.</p>
+                <p class="event-description" style="margin-bottom: 18px;">From different regions, cultures, and countries — this night brings everyone together to honour their roots with pride.</p>
+                
+                <p class="event-description" style="line-height: 1.8; margin-bottom: 18px;">
+                    On the final night of Goa Daddy Festival – Edition 2, guests are invited to dress in traditional or cultural attire that represents their heritage, country, or personal identity.
+                </p>
+                
+                <div class="dress-code">
+                    👔 Dress Code: Traditional / Cultural Attire<br>
+                    <span style="font-size: 0.95em; opacity: 0.9;">(Indian, International, or Fusion — all welcome)</span>
+                </div>
+                
+                <p class="event-description" style="margin-top: 18px; font-weight: 600; font-style: italic;">
+                    This night is about expression, connection, and togetherness.
+                </p>
+                <p class="event-description" style="margin-top: 10px;">
+                    Dance, celebrate, and close the festival surrounded by colour, culture, and community.
+                </p>
+            </div>
+            
+            <div class="end-day">
+                <h3 style="font-size: clamp(1.5rem, 3vw, 2rem); color: #ffed00; margin-bottom: 12px;">🌟 END OF DAY 3</h3>
+                <p style="font-size: clamp(1rem, 1.8vw, 1.2rem);">And just like that…</p>
+                <p style="font-size: clamp(1rem, 1.8vw, 1.2rem); margin-top: 5px;">You lived. You laughed. You belonged.</p>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <!-- DAY 4 -->
+        <section class="day-section">
+            <div class="day-header">
+                <h2 class="day-number">DAY 4</h2>
+                <h3 class="day-theme">FAREWELL AND CHECK-OUT</h3>
+                <div class="day-intro">
+                    <p style="font-weight: 700; font-size: 1.15rem; margin-bottom: 10px;">A GENTLE CLOSE TO A MEMORABLE JOURNEY</p>
+                    <p>As our time together comes to an end, Day 4 is designed for a relaxed and unhurried departure.</p>
+                    <p>Enjoy one last morning with your festival family before heading back with beautiful memories.</p>
+                </div>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🕗 8:00 AM – 11:00 AM</div>
+                <h4 class="event-title">BREAKFAST</h4>
+                <p class="event-description">Enjoy a leisurely breakfast at the restaurant.</p>
+                <p class="event-description">A perfect moment to reconnect, exchange contacts, and relive favourite moments from the festival.</p>
+            </div>
+            
+            <div class="event-block">
+                <div class="event-time">🧳 11:00 AM ONWARDS</div>
+                <h4 class="event-title">CHECK-OUT AND DEPARTURE</h4>
+                <p class="event-description">Please complete your check-out formalities at the reception desk.</p>
+                <p class="event-description">Guests may leave their luggage with the concierge if they wish to spend additional time at the property before departure.</p>
+                <div class="highlight-text">As you say goodbye, take with you the connections, memories, and spirit of the Goa Daddy Festival.</div>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <!-- MORE TO COME SECTION -->
+        <section class="day-section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(118, 75, 162, 0.25)); border: 3px solid; border-image: linear-gradient(135deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787) 1; box-shadow: 0 0 40px rgba(255, 237, 0, 0.3);">
+            <div style="text-align: center; padding: 20px;">
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #ffed00; margin-bottom: 25px;">✨ AND THERE'S MORE TO COME</h2>
+                
+                <div style="max-width: 850px; margin: 0 auto;">
+                    <p style="font-size: clamp(1.05rem, 1.9vw, 1.25rem); line-height: 1.8; margin-bottom: 30px; text-align: center;">
+                        This itinerary offers a glimpse into the experience awaiting you at Goa Daddy Festival – Edition 2. Beyond what you see here, we're curating additional moments and activities to make your time with us even more meaningful and memorable.
+                    </p>
+                    
+                    <div style="background: rgba(255, 237, 0, 0.15); padding: 25px; border-radius: 15px; margin: 30px 0; border-left: 4px solid #ffed00;">
+                        <p style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 700; margin-bottom: 18px; color: #ffed00;">
+                            🌟 ADDITIONAL EXPERIENCES
+                        </p>
+                        <p style="font-size: clamp(1rem, 1.8vw, 1.15rem); line-height: 1.8; margin-bottom: 15px; text-align: left;">
+                            Details of these experiences will be shared with registered guests once the event dates are officially announced.
+                        </p>
+                        <p style="font-size: clamp(1rem, 1.8vw, 1.15rem); line-height: 1.8; margin-bottom: 18px; text-align: left;">
+                            We're thoughtfully designing spaces and activities to encourage deeper connections, comfort, and celebration within the community, including:
+                        </p>
+                        <ul class="event-list" style="text-align: left; margin-top: 20px;">
+                            <li>💑 Singles Meet – A relaxed space to connect, mingle, and form new friendships</li>
+                            <li>💕 Couples Meet – A warm gathering to celebrate love and shared journeys</li>
+                            <li>🎯 Interactive Games & Social Activities – More ways to bond with your festival family</li>
+                            <li>🎉 Surprise Experiences – A few special moments we're keeping as delightful surprises</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(0, 0, 0, 0.2); padding: 25px; border-radius: 15px; margin: 30px 0;">
+                        <p style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 700; margin-bottom: 18px; color: #ffed00;">
+                            👔 DRESS CODES & DETAILED INFORMATION
+                        </p>
+                        <p style="font-size: clamp(1rem, 1.8vw, 1.15rem); line-height: 1.8; text-align: left;">
+                            Complete dress codes, optional styling suggestions, and detailed event information will be shared with all registered guests closer to the festival dates. Our goal is to help you plan comfortably, pack smart, and arrive ready to enjoy every moment.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-top: 35px;">
+                        <p style="font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-weight: 700; color: #ffed00; margin-bottom: 20px;">
+                            🌈 STAY TUNED
+                        </p>
+                        <p style="font-size: clamp(1.05rem, 1.9vw, 1.25rem); line-height: 1.8; margin-bottom: 15px;">
+                            The complete experience is thoughtfully crafted to be immersive, inclusive, and unforgettable.
+                        </p>
+                        <p style="font-size: clamp(1rem, 1.9vw, 1.2rem); line-height: 1.8; font-style: italic; opacity: 0.95;">
+                            All registered members will receive timely updates, detailed guidelines, and exclusive festival information as we move closer to the celebration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="section-divider"></div>
+        
+        <!-- FINAL CLOSING MESSAGE -->
+        <section style="text-align: center; padding: 50px 20px; margin: 40px 0;">
+            <div class="end-day" style="max-width: 800px; margin: 0 auto; padding: 40px 30px;">
+                <h3 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); color: #ffed00; margin-bottom: 18px;">🌈 END OF GOA DADDY FESTIVAL – EDITION 2</h3>
+                <p style="font-size: clamp(1.2rem, 2.2vw, 1.6rem); font-weight: 700; margin-top: 20px;">Thank you for being part of our journey.</p>
+                <p style="font-size: clamp(1.05rem, 2vw, 1.35rem); margin-top: 15px;">We look forward to welcoming you again at the next edition.</p>
+            </div>
+        </section>
+        
+        <div class="rainbow-line" style="margin: 50px auto;"></div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 25px; font-weight: 900;">Join Us at Edition 2</h2>
+            <p style="font-size: clamp(1.1rem, 2vw, 1.4rem); margin: 12px 0;">📱 @goadaddyfestival</p>
+            <p style="font-size: clamp(1.1rem, 2vw, 1.4rem); margin: 12px 0;">🌐 www.goadaddyfestival.com</p>
+            <p style="font-size: clamp(1.1rem, 2vw, 1.4rem); margin: 12px 0;">💬 +91 9967622952</p>
+            <div class="rainbow-line" style="margin: 35px auto 25px; max-width: 400px;"></div>
+            <p style="font-size: clamp(1.2rem, 2.3vw, 1.6rem); font-weight: 700; font-style: italic;">India's Pioneering Gay Daddy Festival</p>
+        </footer>
+    </div>
+</body>
+</html>
+                <p style="font-size: clamp(1.2rem, 2.2vw
